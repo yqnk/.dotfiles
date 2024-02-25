@@ -1,0 +1,35 @@
+# Global variables
+export STARSHIP_CONFIG="/home/yan/.config/starship/starship.toml"
+export WALLPAPERS="/home/yan/.local/share/wallpapers"
+export LS_COLORS="ow=01;37:di=01;37:ex=01;32:*.png=01;30:*.svg=01;30:*.jpeg=01;30:*.jpg=01;30"
+
+# History
+SAVEHIST=1000 # save 1000 most-recent lines
+HISTFILE="/home/yan/.zsh_history"
+
+# Aliases
+alias ls='ls --color=auto -F'
+
+# Custom commands
+mkcd() {
+    mkdir -p "$1" && cd "$1" || return
+}
+
+# pfetch variables
+export PF_INFO="ascii title os kernel shell wm uptime pkgs memory"
+export PF_COL3=4 # Color for info names
+export PF_COL2=9 # Color for info data
+export PF_COL1
+autoload -U promptinit && promptinit=6 # Color for title
+
+# Init starship
+eval "$(starship init zsh)"
+
+# zsh plugins
+source "/home/yan/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+ZSH_HIGHLIGHT_STYLES[suffix-alias]='fg=#8abdb6,underline'
+ZSH_HIGHLIGHT_STYLES[precommand]='fg=#8abdb6,underline'
+ZSH_HIGHLIGHT_STYLES[arg0]='fg=#8abdb6'
+source "/home/yan/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#4a4a4a'
+

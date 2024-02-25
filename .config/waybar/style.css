@@ -1,0 +1,112 @@
+* { 
+    font-family: 'Fira Code', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    min-height: 16px;
+}
+
+window#waybar {	
+    background-color: transparent;
+    color: white;
+    transition-property: background-color;
+    transition-duration: .5s;
+    border-radius: 15px 15px 15px 15px; 
+}
+
+#workspaces {	
+    margin-right: 10px;
+	border-radius: 15px;
+    opacity: 0.88;
+}
+
+#workspaces button {
+    color: white;
+    font-weight: normal;
+    margin: 0px;
+	padding: 0 1px;
+	border: none;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button:hover {
+	border: none;	
+	background: transparent;
+	color: white;
+	font-weight: bold;
+	border-radius: 15px;
+	border-top: 1px solid white;
+}
+
+#workspaces button.active {
+	background: transparent;
+	color: white;
+	font-weight: bold;
+}
+
+#clock {
+    background-color: transparent;
+    color: white;
+    border-radius: 0px 20px 20px 0px;
+    margin-right: 4px;
+}
+
+#network {
+    background-color: transparent;
+    color: white;
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* #network.disconnected {
+	background-color: transparent;
+	color: #white;
+} */
+
+#battery {
+    background-color: transparent;
+    color: white;
+   	padding-left: 10px;
+	padding-right: 10px; 
+}
+
+#battery.charging, #battery.plugged {
+    color: white;
+    background-color: transparent;
+}
+
+@keyframes blink {
+    to {
+        background-color: transparent;
+        color: white;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: transparent;
+    color: red;
+}
+
+label:focus {
+    background-color: transparent;
+}
+
+#temperature,
+#memory,
+#cpu {
+    background-color: transparent;
+    color: white;
+    /* margin-left: -6px;
+    margin-right: -6px; */
+    padding-left: 2px;
+	padding-right: 2px;
+}
+
+#temperature.critical {
+    color: red;
+}
+
+#pulseaudio {
+    background-color: transparent;
+    color: white;
+}
