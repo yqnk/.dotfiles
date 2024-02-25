@@ -3,9 +3,11 @@ export STARSHIP_CONFIG="/home/yan/.config/starship/starship.toml"
 export WALLPAPERS="/home/yan/.local/share/wallpapers"
 export LS_COLORS="ow=01;37:di=01;37:ex=01;32:*.png=01;30:*.svg=01;30:*.jpeg=01;30:*.jpg=01;30"
 
-#binds
+#binds -- see command zle -al -- cat to find keycode
 bindkey "^[[3~" delete-char
 bindkey "^[[3;5~" delete-word
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
 
 # aliases
 alias ls='ls --color=auto -F'
