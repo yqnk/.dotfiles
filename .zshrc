@@ -28,6 +28,9 @@ export PF_COL2=9 # Color for info data
 export PF_COL1
 autoload -U promptinit && promptinit=6 # Color for title
 
+# unset
+unsetopt beep # disable beep on completion when pressing TAB
+
 # init starship
 eval "$(starship init zsh)"
 
