@@ -14,7 +14,7 @@ bindkey '^H' backward-kill-word
 alias ls='ls --color=auto -F'
 alias tree='tree -F'
 alias cls='clear'
-alias la="ls -a"
+alias py='python3'
 
 # custom commands
 mkcd() {
