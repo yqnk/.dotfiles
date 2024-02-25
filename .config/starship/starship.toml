@@ -46,7 +46,7 @@ format = '[$symbol$branch]($style) '
 style = 'purple'
 
 [git_status]
-format = '[- $all_status$ahead_behind]($style)'
+format = '[- $all_status$ahead_behind]($style) '
 style = 'bold purple'
 conflicted = '🏳'
 up_to_date = ' '
@@ -57,3 +57,15 @@ behind = '⇣${count}'
 modified = ' '
 staged = '[++\($count\)](#515e6e)'
 deleted = ' '
+
+# Disable languages version preview
+[rust]
+disabled = true
+[c]
+disabled = true
+[cmake]
+disabled = true
+[python]
+disabled = true
+[lua]
+disabled = true
