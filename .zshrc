@@ -8,11 +8,13 @@ bindkey "^[[3~" delete-char
 bindkey "^[[3;5~" delete-word
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
+bindkey '^H' backward-kill-word
 
 # aliases
 alias ls='ls --color=auto -F'
 alias tree='tree -F'
 alias cls='clear'
+alias la="ls -a"
 
 # custom commands
 mkcd() {
