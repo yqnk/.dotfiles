@@ -1,16 +1,12 @@
-# Global variables
+# global variables
 export STARSHIP_CONFIG="/home/yan/.config/starship/starship.toml"
 export WALLPAPERS="/home/yan/.local/share/wallpapers"
 export LS_COLORS="ow=01;37:di=01;37:ex=01;32:*.png=01;30:*.svg=01;30:*.jpeg=01;30:*.jpg=01;30"
 
-# History
-SAVEHIST=1000 # save 1000 most-recent lines
-HISTFILE="/home/yan/.zsh_history"
-
-# Aliases
+# aliases
 alias ls='ls --color=auto -F'
 
-# Custom commands
+# custom commands
 mkcd() {
     mkdir -p "$1" && cd "$1" || return
 }
@@ -22,8 +18,12 @@ export PF_COL2=9 # Color for info data
 export PF_COL1
 autoload -U promptinit && promptinit=6 # Color for title
 
-# Init starship
+# init starship
 eval "$(starship init zsh)"
+
+# zsh history
+SAVEHIST=1000 # save 1000 most-recent lines
+HISTFILE="/home/yan/.zsh_history"
 
 # zsh plugins
 source "/home/yan/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
