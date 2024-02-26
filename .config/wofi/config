@@ -4,3 +4,7 @@ hide_scroll=true
 width=420
 allow_markup=true
 no_actions=true
+normal_window=false
+term=kitty
+exec_search=false
+insensitive=true
