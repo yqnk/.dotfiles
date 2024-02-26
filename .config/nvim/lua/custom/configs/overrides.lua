@@ -42,6 +42,9 @@ M.mason = {
     -- snake stuff
     "python-lsp-server",
 
+    -- crab stuff
+    "rust-analyzer",
+
     -- shell stuff
     "shfmt",
   },
