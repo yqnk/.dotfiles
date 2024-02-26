@@ -1,4 +1,6 @@
+prompt=
 mode=run
-hide-scroll=
+hide_scroll=true
 width=420
-term=kitty
+allow_markup=true
+no_actions=true
