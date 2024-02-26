@@ -39,6 +39,9 @@ M.mason = {
     "clangd",
     "clang-format",
 
+    -- snake stuff
+    "python-lsp-server",
+
     -- shell stuff
     "shfmt",
   },
