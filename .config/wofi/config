@@ -11,4 +11,3 @@ exec_search=false
 insensitive=true
 always_parse_args=true
 single_click=true
-layer=overlay
