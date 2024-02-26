@@ -15,6 +15,7 @@ alias ls='ls --color=auto -F'
 alias tree='tree -F'
 alias cls='clear'
 alias py='python3'
+alias wf-recorder='wf-recorder -c mkv --file=recording.mkv'
 
 # custom commands
 mkcd() {
