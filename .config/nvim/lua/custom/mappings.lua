@@ -21,4 +21,32 @@ M.general = {
 
 -- more keybinds!
 
+M.dap = {
+  plugin = true,
+  n = {
+    ["<leader>dab"] = { "<cmd> DapToggleBreakpoint <CR>", "Toggle breakpoint" },
+    ["<leader>dad"] = {
+      function ()
+        local widgets = require('dap.ui.widgets');
+        local sidebar = widgets.sidebar(widgets.scopes);
+        sidebar.open();
+      end,
+      "Open debugging sidebar"
+    }
+  }
+}
+
+M.crates = {
+  plugin = true,
+  n = {
+    ["<leader>rcu"] = {
+      function ()
+        require('crates').upgrade_all_crates()
+      end,
+      "Update all crates"
+    }
+  }
+}
+
+
 return M
