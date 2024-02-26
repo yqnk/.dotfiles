@@ -1,6 +1,7 @@
 prompt=run
 mode=run
 hide_scroll=true
+filter_rate=1
 width=420
 allow_markup=true
 no_actions=true
@@ -8,3 +9,6 @@ normal_window=false
 term=kitty
 exec_search=false
 insensitive=true
+always_parse_args=true
+single_click=true
+layer=overlay
