@@ -20,8 +20,8 @@ success_symbol = '[➜](bold #8abdb6)'
 error_symbol = '[➜](bold red)'
 
 [username]
-# style_user = '#c4c8c5'
-# style_root = '#c4c8c5'
+# style_user = '#938c9c'
+# style_root = '#938c9c'
 style_user = '#515e6e'
 style_root = '#515e6e'
 format = '(#c4c8c5)[$user]($style) '
