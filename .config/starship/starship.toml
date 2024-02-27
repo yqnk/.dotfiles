@@ -13,7 +13,7 @@ right_format = '$cmd_duration'
 [cmd_duration]
 min_time = 2000
 format = 'in [$duration]($style)'
-style = 'purple'
+style = '#fabd2f'
 
 [character]
 success_symbol = '[➜](bold #8abdb6)'
@@ -30,7 +30,7 @@ show_always = true
 
 [hostname]
 ssh_only = false
-format = '[$hostname](bold purple) '
+format = '[$hostname](bold #fabd2f) '
 disabled = true
 
 [directory]
@@ -43,11 +43,11 @@ style = 'bold white'
 [git_branch]
 symbol = ' '
 format = '[$symbol$branch]($style) '
-style = 'purple'
+style = '#fabd2f'
 
 [git_status]
 format = '[- $all_status$ahead_behind]($style) '
-style = 'bold purple'
+style = 'bold #fabd2f'
 conflicted = '🏳'
 up_to_date = ' '
 untracked = ' '
