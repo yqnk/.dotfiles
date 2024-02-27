@@ -29,6 +29,12 @@ local plugins = {
     opts = overrides.nvimtree,
   },
 
+  -- Highlight only active portions of code
+  {
+    "folke/twilight.nvim",
+    opts = {},
+  },
+
   -- Install a plugin
   {
     "max397574/better-escape.nvim",
