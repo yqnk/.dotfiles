@@ -27,13 +27,7 @@ local plugins = {
   {
     "nvim-tree/nvim-tree.lua",
     opts = overrides.nvimtree,
-  },
-
-  -- Highlight only active portions of code
-  {
-    "folke/twilight.nvim",
-    opts = {},
-  },
+  }, 
 
   -- Install a plugin
   {
