@@ -27,8 +27,8 @@ mkcd() {
 export PF_INFO="ascii title os kernel shell wm uptime pkgs memory"
 export PF_COL3=4 # Color for info names
 export PF_COL2=9 # Color for info data
-export PF_COL1
-autoload -U promptinit && promptinit=6 # Color for title
+export PF_COL1=6 # Color for title
+autoload -U promptinit && promptinit=6
 
 # unset
 unsetopt beep # disable beep on completion when pressing TAB
@@ -47,4 +47,3 @@ ZSH_HIGHLIGHT_STYLES[precommand]='fg=#8abdb6,underline'
 ZSH_HIGHLIGHT_STYLES[arg0]='fg=#8abdb6'
 source "/home/yan/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#4a4a4a'
-
