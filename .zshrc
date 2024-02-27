@@ -18,7 +18,6 @@ alias ip='ip -c=auto'
 alias tree='tree -F'
 alias cls='clear'
 alias py='python3'
-alias wf-recorder='wf-recorder -c mkv --file=recording.mkv'
 alias asciiquarium='asciiquarium -t -s'
 
 # custom commands
