@@ -39,9 +39,6 @@ M.mason = {
     "clangd",
     "clang-format",
 
-    -- snake stuff
-    "python-lsp-server",
-
     -- crab stuff
     "rust-analyzer",
 
