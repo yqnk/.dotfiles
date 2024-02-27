@@ -47,5 +47,6 @@ source "/home/yan/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 ZSH_HIGHLIGHT_STYLES[suffix-alias]='fg=#8abdb6,underline'
 ZSH_HIGHLIGHT_STYLES[precommand]='fg=#8abdb6,underline'
 ZSH_HIGHLIGHT_STYLES[arg0]='fg=#8abdb6'
+
 source "/home/yan/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#4a4a4a'
