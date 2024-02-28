@@ -81,7 +81,7 @@ local plugins = {
     "mfussenegger/nvim-dap", -- rust & cpp debugger tool
     config = function(_, _)
       require("core.utils").load_mappings("dap")
-    end,
+    end
   },
   {
     'saecki/crates.nvim',
@@ -127,7 +127,7 @@ local plugins = {
       "mfussenegger/nvim-dap",
     },
     opts = {
-      handlers = {},
+      handlers = {}
     },
   },
   { -- automatically start the UI when debugging

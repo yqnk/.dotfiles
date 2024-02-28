@@ -30,7 +30,19 @@ M.dap = {
     },
     ["<leader>dr"] = {
       "<cmd> DapContinue <CR>",
-      "Start or continue the debugger",
+      "Start debugger or go to next BP",
+    },
+    ["<leader>dn"] = {
+      "<cmd> DapStepOver <CR>",
+      "Goes next step bug skips functions",
+    },
+    ["<leader>di"] = {
+      "<cmd> DapStepInto <CR>",
+      "Goes next step, including functions",
+    },
+    ["<leader>do"] = {
+      "<cmd DapStepOut <CR>",
+      "Step out of a function",
     },
     ["<leader>dk"] = {
       "<cmd> DapTerminate <CR>",
