@@ -1,6 +1,6 @@
 daemonize
 show-failed-attempts
-color=ffffffff
+color=ffffff00
 ignore-empty-password
 fade-in=0.33
 grace=0
