@@ -38,12 +38,10 @@ M.mason = {
     -- c/cpp stuff
     "clangd",
     "clang-format",
+    "codelldb",
 
     -- crab stuff
     "rust-analyzer",
-
-    -- shell stuff
-    "shfmt",
   },
 }
 

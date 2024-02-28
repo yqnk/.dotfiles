@@ -24,8 +24,19 @@ M.general = {
 M.dap = {
   plugin = true,
   n = {
-    ["<leader>dab"] = { "<cmd> DapToggleBreakpoint <CR>", "Toggle breakpoint" },
-    ["<leader>dad"] = {
+    ["<leader>db"] = {
+      "<cmd> DapToggleBreakpoint <CR>",
+      "Add breakpoint at line",
+    },
+    ["<leader>dr"] = {
+      "<cmd> DapContinue <CR>",
+      "Start or continue the debugger",
+    },
+    ["<leader>dk"] = {
+      "<cmd> DapTerminate <CR>",
+      "Kills the debugger",
+    },
+    ["<leader>dd"] = {
       function ()
         local widgets = require('dap.ui.widgets');
         local sidebar = widgets.sidebar(widgets.scopes);

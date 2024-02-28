@@ -12,7 +12,6 @@ local plugins = {
       require "custom.configs.lspconfig"
     end, -- Override to setup mason-lspconfig
   },
-
   -- override plugin configs
   {
     "williamboman/mason.nvim",
@@ -27,7 +26,7 @@ local plugins = {
   {
     "nvim-tree/nvim-tree.lua",
     opts = overrides.nvimtree,
-  }, 
+  },
 
   -- Install a plugin
   {
@@ -60,6 +59,8 @@ local plugins = {
   --   "mg979/vim-visual-multi",
   --   lazy = false,
   -- } 
+
+  -- RUST STUFF
   {
     "rust-lang/rust.vim",
     ft = "rust",
@@ -77,7 +78,10 @@ local plugins = {
     end
   },
   {
-    "mfussenegger/nvim-dap",
+    "mfussenegger/nvim-dap", -- rust & cpp debugger tool
+    config = function(_, _)
+      require("core.utils").load_mappings("dap")
+    end,
   },
   {
     'saecki/crates.nvim',
@@ -105,7 +109,46 @@ local plugins = {
       table.insert(M.sources, {name = "crates"})
       return M
     end,
-  }
+  },
+
+  -- CPP STUFF
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    event = "VeryLazy",
+    opts = function()
+      return require "custom.configs.null-ls"
+    end,
+  },
+  {
+    "jay-babu/mason-nvim-dap.nvim",
+    event = "VeryLazy",
+    dependencies = {
+      "williamboman/mason.nvim",
+      "mfussenegger/nvim-dap",
+    },
+    opts = {
+      handlers = {},
+    },
+  },
+  { -- automatically start the UI when debugging
+    "rcarriga/nvim-dap-ui",
+    event = "VeryLazy",
+    dependencies = "mfussenegger/nvim-dap",
+    config = function()
+      local dap = require("dap")
+      local dapui = require("dapui")
+      dapui.setup()
+      dap.listeners.after.event_initialized["dapui_config"] = function()
+        dapui.open()
+      end
+      dap.listeners.before.event_terminated["dapui_config"] = function()
+        dapui.close()
+      end
+      dap.listeners.before.event_exited["dapui_config"] = function()
+        dapui.close()
+      end
+    end
+  },
 }
 
 return plugins
