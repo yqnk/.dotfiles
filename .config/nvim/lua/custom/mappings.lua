@@ -34,7 +34,7 @@ M.dap = {
     },
     ["<leader>dn"] = {
       "<cmd> DapStepOver <CR>",
-      "Goes next step bug skips functions",
+      "Goes next step skipping functions",
     },
     ["<leader>di"] = {
       "<cmd> DapStepInto <CR>",
