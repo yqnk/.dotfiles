@@ -17,8 +17,8 @@
     "clock": {
       "interval": 5,
 		  "tooltip": false,
-		  "format": "{:%I:%M %p %b %d}",
-      "format-alt": "{:%I:%M:%S %p %b %d}",
+		  "format-alt": "{:%I:%M %p %b %d}",
+      "format": "{:%I:%M:%S %p %b %d}",
 		  "timezone": "Canada/Eastern",
     },
     "network": {
