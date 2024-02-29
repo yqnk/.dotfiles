@@ -3,6 +3,13 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 
 local lspconfig = require("lspconfig")
 
+lspconfig.lua_ls.setup {
+  on_attach = function(client, _)
+    -- Opt out of semantic token highlighting.
+    client.server_capabilities.semanticTokensProvider = nil
+  end,
+}
+
 -- if you just want default config for the servers then put them in a table
 local servers = { "html", "cssls", "tsserver" }
 
@@ -15,13 +22,6 @@ end
 
 -- 
 -- lspconfig.pyright.setup { blabla}
-
--- lspconfig.lua_ls.setup {
---   on_attach = function(client, _)
---     -- Opt out of semantic token highlighting.
---     client.server_capabilities.semanticTokensProvider = nil
---   end,
--- }
 
 lspconfig.clangd.setup {
   on_attach = function(client, bufnr)
