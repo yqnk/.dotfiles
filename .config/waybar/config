@@ -15,9 +15,10 @@
 		
     // https://howardhinnant.github.io/date/date.html#to_stream_formatting
     "clock": {
-      "interval": 60,
-		  "tooltip": true,
+      "interval": 5,
+		  "tooltip": false,
 		  "format": "{:%I:%M %p %b %d}",
+      "format-alt": "{:%I:%M:%S %p %b %d}",
 		  "timezone": "Canada/Eastern",
     },
     "network": {
