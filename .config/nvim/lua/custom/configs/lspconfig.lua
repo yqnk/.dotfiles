@@ -11,7 +11,7 @@ lspconfig.lua_ls.setup {
 }
 
 -- if you just want default config for the servers then put them in a table
-local servers = { "html", "cssls", "tsserver" }
+local servers = { "html", "cssls", "tsserver", "clangd" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -19,14 +19,3 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
-
--- 
--- lspconfig.pyright.setup { blabla}
-
-lspconfig.clangd.setup {
-  on_attach = function(client, bufnr)
-    client.server_capabilities.signatureHelpProvider = false
-    on_attach(client, bufnr)
-  end,
-  capabilities = capabilities,
-}
