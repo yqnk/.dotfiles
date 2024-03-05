@@ -1,4 +1,7 @@
 # .dotfiles
+> My ArchLinux dotfiles.
+
+## Install
 ```sh
 # Install wallpapers
 mv wallpapers/ ~/.local/share/wallpapers/
