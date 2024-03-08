@@ -16,7 +16,7 @@ format = 'in [$duration]($style)'
 style = '#fabd2f'
 
 [character]
-success_symbol = '[➜](bold #8abdb6)'
+success_symbol = '[➜](bold #8abdb6)' # #8abdb6
 error_symbol = '[➜](bold red)'
 
 [username]
