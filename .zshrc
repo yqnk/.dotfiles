@@ -20,6 +20,7 @@ alias rg='rg --color=auto'
 alias cls='clear'
 alias py='python3'
 alias asciiquarium='asciiquarium -t -s'
+alias rl='~/rustlings/target/release/rustlings'
 
 # custom commands
 mkcd() {
