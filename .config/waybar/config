@@ -9,10 +9,52 @@
     "margin-right": 5,
 
     // Modules
-    "modules-left":["network", "clock"],
-    "modules-center":["cpu", "memory", "temperature"],
-    "modules-right":["pulseaudio", "battery"],
-		
+    "modules-left":["network", "custom/pipe", "clock", "custom/pipe", "custom/updater"],
+    "modules-center":["hyprland/workspaces"],
+    "modules-right":["cpu", "memory", "temperature", "custom/pipe", "pulseaudio", "custom/pipe", "battery"],
+	
+"hyprland/workspaces": {
+	  "active-only": false,
+    "all-outputs": true, 
+    "format": "{icon}",
+    "show-special": false,
+    "on-click": "activate",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+    },
+    "format-icons": {
+      "active": "",
+      "default": "",
+	},  
+},
+
+"hyprland/workspaces#pacman": {
+    "active-only":false,
+    "all-outputs": true,
+    "format": "{icon}",
+    "on-click": "activate",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "show-special": false,
+    "persistent-workspaces":{
+        "1": [],
+        "2": [],
+        "3": [],
+        "4": [],
+        "5": [],
+    },
+    "format": "{icon}",
+    "format-icons": {
+      "active": " 󰮯 ",
+      "default": "󰊠",
+      "persistent":"󰊠",
+    },
+},
+
     // https://howardhinnant.github.io/date/date.html#to_stream_formatting
     "clock": {
       "interval": 5,
@@ -33,19 +75,19 @@
     },
     "battery": {
         "states": {
-        // "good": 95,
-        "warning": 30,
-        "critical": 15,
-      },
+          "good": 95,
+          "warning": 30,
+          "critical": 15,
+        },
       "format": "{capacity}% {icon}",
-      "format-charging": "{capacity}% ",
+      "format-charging": "{capacity}% ",
       "format-plugged": "{capacity}% ",
       "format-alt": "{time} {icon}",
-      "format-icons": ["", "", "", "", ""],
-	    "tooltip": false,
+     "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"], 
+      "tooltip": false,
     },
      "cpu": {
-        "format": "{usage}% ",
+        "format": "{usage}% 󰍛",
         "tooltip": false,
     },
     "memory": {
@@ -59,6 +101,11 @@
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C",
         "tooltip": false,
+    },
+    "disk": {
+      "interval": 30,
+      "path": "/",
+      "format": "{percentage-used}% /",
     },
     "pulseaudio": {
         "format": "{volume}% {icon}",
@@ -79,5 +126,19 @@
         },
         "on-click": "pavucontrol",
 		"tooltip": false,
-    }, 
+    },
+
+    "custom/pipe": {
+        "format": "|",
+        "interval": "once",
+        "tooltip": false
+    },
+
+    "custom/updater":{
+        "format": " {}",
+        "exec": "checkupdates | wc -l",
+        "exec-if": "[[ $(checkupdates | wc -l) ]]",
+        "interval": 21600,
+        "on-click": "kitty -T update paru -Syu",
+    },
 }

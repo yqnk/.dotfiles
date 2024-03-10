@@ -15,7 +15,7 @@ window#waybar {
 
 #workspaces {	
     margin-right: 10px;
-	border-radius: 15px;
+	  border-radius: 15px;
     opacity: 0.88;
 }
 
@@ -46,8 +46,8 @@ window#waybar {
 #clock {
     background-color: transparent;
     color: white;
-    border-radius: 0px 20px 20px 0px;
-    margin-right: 4px;
+    border-radius: 0px 0px 0px 0px;
+    /*margin-right: 4px;*/
 }
 
 #network {
@@ -55,7 +55,7 @@ window#waybar {
     color: white;
     border-radius: 15px;
     padding-left: 10px;
-    padding-right: 10px;
+    margin-right: 5px;
 }
 
 /* #network.disconnected {
@@ -66,13 +66,21 @@ window#waybar {
 #battery {
     background-color: transparent;
     color: white;
-   	padding-left: 10px;
-	padding-right: 10px; 
+	  padding-right: 10px; 
 }
 
 #battery.charging, #battery.plugged {
     color: white;
     background-color: transparent;
+}
+
+#custom-updater {
+  
+}
+
+#custom-pipe {
+  margin-left: 4px;
+  margin-right: 4px;
 }
 
 @keyframes blink {
@@ -93,6 +101,7 @@ label:focus {
 
 #temperature,
 #memory,
+#disk,
 #cpu {
     background-color: transparent;
     color: white;
