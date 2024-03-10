@@ -9,7 +9,7 @@
     "margin-right": 5,
 
     // Modules
-    "modules-left":["network", "custom/pipe", "clock", "custom/pipe", "custom/updater"],
+    "modules-left":["custom/weather", "custom/pipe", "network", "custom/pipe", "clock", "custom/pipe", "custom/updater"],
     "modules-center":["hyprland/workspaces"],
     "modules-right":["cpu", "memory", "temperature", "custom/pipe", "pulseaudio", "custom/pipe", "battery"],
 	
@@ -59,8 +59,8 @@
     "clock": {
       "interval": 5,
 		  "tooltip": false,
-		  "format-alt": "{:%I:%M %p %b %d}",
-      "format": "{:%I:%M:%S %p %b %d}",
+		  "format": "{:%H:%M - %d/%b}",
+      "format-alt": "{:%H:%M:%S - %d/%b}",
 		  "timezone": "Canada/Eastern",
     },
     "network": {
@@ -87,20 +87,23 @@
       "tooltip": false,
     },
      "cpu": {
-        "format": "{usage}% 󰍛",
+        "format": "{usage}% 󰍛 ",
         "tooltip": false,
     },
     "memory": {
-        "format": "{}% ",
         "tooltip": false,
+        "interval": 10,
+        "format": "{used:0.1f}G 󰾆 ",
+        "format-alt": "{percentage}% 󰾆 ",
     },
     "temperature": {
         "thermal-zone": 7,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C",
+        "format": "{temperatureC}°C {icon}",
         "tooltip": false,
+        "format-icons": ["󰈸"],
     },
     "disk": {
       "interval": 30,
@@ -140,5 +143,13 @@
         "exec-if": "[[ $(checkupdates | wc -l) ]]",
         "interval": 21600,
         "on-click": "kitty -T update paru -Syu",
+    },
+
+    "custom/weather": {
+        "format": "{}°C",
+        "tooltip": false, // true gives a lot of useful information tho !!!
+        "interval": 3600,
+        "exec": "wttrbar",
+        "return-type": "json"
     },
 }

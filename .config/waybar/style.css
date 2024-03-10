@@ -15,7 +15,7 @@ window#waybar {
 
 #workspaces {	
     margin-right: 10px;
-	  border-radius: 15px;
+	border-radius: 15px;
     opacity: 0.88;
 }
 
@@ -54,8 +54,11 @@ window#waybar {
     background-color: transparent;
     color: white;
     border-radius: 15px;
-    padding-left: 10px;
-    margin-right: 5px;
+    margin-right: 4px;
+}
+
+#custom-weather {
+  padding-left: 10px;
 }
 
 /* #network.disconnected {
