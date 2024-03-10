@@ -14,14 +14,14 @@ M.general = {
     },
 
     --  move and select multiple lines
-    ["J"] = { ":m .+1<CR>==", "Move line down"},
-    ["K"] = { ":m .-2<CR>==", "Move line up" },
+    ["<A-j>"] = { ":m .+1<CR>==", "Move line down"},
+    ["<A-k>"] = { ":m .-2<CR>==", "Move line up" },
 
   },
   v = {
     [">"] = { ">gv", "indent"},
-    ["J"] = {":m '>+1<CR>gv=gv", "Move lines down"},
-    ["K"] = {":m '<-2<CR>gv=gv", "Move lines up"},
+    ["<A-j>"] = {":m '>+1<CR>gv=gv", "Move lines down"},
+    ["<A-k>"] = {":m '<-2<CR>gv=gv", "Move lines up"},
   },
 }
 
