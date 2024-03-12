@@ -9,7 +9,7 @@
     "margin-right": 5,
 
     // Modules
-    "modules-left":["custom/weather", "custom/pipe", "network", "custom/pipe", "clock", "custom/pipe", "custom/updater"],
+    "modules-left":["network", "custom/pipe", "clock", "custom/pipe", "custom/updater"],
     "modules-center":["hyprland/workspaces"],
     "modules-right":["cpu", "memory", "temperature", "custom/pipe", "pulseaudio", "custom/pipe", "battery"],
 	
