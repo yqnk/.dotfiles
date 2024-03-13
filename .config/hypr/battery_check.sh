@@ -1,14 +1,20 @@
-#!/bin/bash
+#!/bin/zsh
 
-# Récupère le pourcentage de la batterie
+if [[ -f /tmp/battery_check.lock ]]; then
+    echo "Already running."
+    exit 1
+fi
+
+touch /tmp/battery_check.lock
 percentage=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "percentage" | awk '{print $2}' | tr -d '%')
 
-# Vérifie si le pourcentage est inférieur à 20 %
 if [ "$percentage" -lt 20 ]; then
-    echo "Attention : Niveau de batterie inférieur à 20 % !"
     # Envoie une notification critique avec notify-send
-    notify-send -u critical "Niveau de batterie faible" "Le niveau de batterie est inférieur à 20 % !"
+    notify-send -u critical "Low battery" "20% left"
 fi
+
+# Supprime le fichier de verrouillage lorsque le script est terminé
+rm /tmp/battery_check.lock
 
 # Sortie du script après la vérification
 exit 0
