@@ -131,7 +131,7 @@
             "default": ["", "", ""],
         },
         "on-click": "pavucontrol",
-		"tooltip": false,
+		    "tooltip": false,
     },
 
     "custom/pipe": {
@@ -145,7 +145,7 @@
         "exec": "checkupdates | wc -l",
         "exec-if": "[[ $(checkupdates | wc -l) ]]",
         "interval": 21600,
-        "on-click": "kitty -T update paru -Syu",
+        "on-click": "kitty -T update paru -Syu && checkupdates | wc -l",
     },
 
     "custom/weather": {
