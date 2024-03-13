@@ -1,4 +1,4 @@
-error??? :)
+missing ; line 25
 awesome!
 limited edition!
 sus...
@@ -13,3 +13,5 @@ High card
 crampthreshold
 Lorem ipsum dolor sit amet
 :(){ :|:& };:
+firefox, uh ?
+/all ggwp
