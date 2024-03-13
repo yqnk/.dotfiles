@@ -16,5 +16,5 @@
     fg-col2: #f8f8f8;
     grey: #38474a;
     width: 400;
-placeholder-text: " sus";
+placeholder-text: " made in Rust!";
 }
