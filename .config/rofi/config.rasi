@@ -61,7 +61,9 @@ entry {
   padding: 6px;
   margin: 20px 0px 0px 10px;
   background-color: @transparent;
-  color: white;
+  color: @fg-col;
+  placeholder: @placeholder-text;
+  placeholder-color: @grey; 
 }
 
 listview {
