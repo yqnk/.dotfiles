@@ -8,7 +8,9 @@ fi
 touch /tmp/battery_check.lock
 percentage=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "percentage" | awk '{print $2}' | tr -d '%')
 
-if [ "$percentage" -lt 20 ]; then
+if [ "$percentage" -lt 5 ]; then
+    notify-send -u critical "Low battery" "5% left"
+elif [ "$percentage" -lt 20 ]; then
     # Envoie une notification critique avec notify-send
     notify-send -u critical "Low battery" "20% left"
 fi
