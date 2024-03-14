@@ -146,6 +146,7 @@
         "exec-if": "[[ $(checkupdates | wc -l) ]]",
         "interval": 21600,
         "on-click": "kitty -T update paru -Syu && checkupdates | wc -l",
+        "tooltip": false,
     },
 
     "custom/weather": {
