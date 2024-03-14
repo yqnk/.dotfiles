@@ -1,4 +1,3 @@
-asciiquarium-transparent-git
 base
 base-devel
 bluez
@@ -11,12 +10,8 @@ firefox
 fzf
 git
 grim
-grimblast-git
-hypridle
 hyprland
-hyprlock
 hyprpaper
-hyprpicker
 imv
 kitty
 libnotify
@@ -42,16 +37,12 @@ npm
 openssh
 pacman-contrib
 pamixer
-paru
-paru-debug
 pavucontrol
-pfetch
 pulseaudio
 python-pip
 python-pynvim
 python-pywal
 ripgrep
-rofi-lbonn-wayland
 rustup
 slurp
 starship

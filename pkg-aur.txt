@@ -1,0 +1,9 @@
+asciiquarium-transparent-git
+grimblast-git
+hypridle
+hyprlock
+hyprpicker
+paru
+paru-debug
+pfetch
+rofi-lbonn-wayland
