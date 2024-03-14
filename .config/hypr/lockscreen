@@ -1,0 +1,33 @@
+#! /usr/bin/env zsh
+
+brightness=$(brightnessctl get)
+
+fadein() {
+    current_brightness=$(brightnessctl get)
+
+    if (( current_brightness > 18000 )); then
+        while (( current_brightness > 18000 )); do
+            brightnessctl set "5%-"
+            sleep 0.01
+            current_brightness=$(brightnessctl get)
+        done
+    fi
+}
+
+fadein &
+hyprlock &
+
+wait
+
+fadeout() {
+    current_brightness=$(brightnessctl get)
+
+    while (( current_brightness < brightness )); do
+        brightnessctl set "+5%"
+        sleep 0.01
+        current_brightness=$(brightnessctl get)
+    done
+}
+
+fadeout
+
