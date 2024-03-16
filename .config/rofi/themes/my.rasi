@@ -12,9 +12,10 @@
     magenta: #c1aaec;
     red: #cc6666;
     yellow: #fabd2f;
+    hoverbutton: #1E3B46;
     fg-col: #c4c5c8;
     fg-col2: #f8f8f8;
     grey: #38474a;
     width: 400;
-placeholder-text: " made in Rust!";
+placeholder-text: " awesome!";
 }
