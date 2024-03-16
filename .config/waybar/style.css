@@ -13,9 +13,10 @@ window#waybar {
     border-radius: 15px 15px 15px 15px; 
 }
 
-#workspaces {	
-    margin-right: 10px;
-	border-radius: 15px;
+#workspaces {
+  background: transparent;
+    margin-right: 3px;
+	  border-radius: 15px;
     opacity: 0.88;
 }
 
@@ -23,8 +24,8 @@ window#waybar {
     color: white;
     font-weight: normal;
     margin: 0px;
-	padding: 0 1px;
-	border: none;
+	  padding: 0 1px;
+	  border: none;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */

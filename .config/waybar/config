@@ -9,8 +9,8 @@
     "margin-right": 5,
 
     // Modules
-    "modules-left":["network", "custom/pipe", "clock", "custom/pipe", "custom/updater"],
-    "modules-center":["hyprland/workspaces"],
+    "modules-left":["network", "custom/pipe", "hyprland/workspaces", "custom/pipe", "custom/updater"],
+    "modules-center":["clock"],
     "modules-right":["cpu", "memory", "temperature", "custom/pipe", "pulseaudio", "custom/pipe", "battery"],
 	
 "hyprland/workspaces": {
