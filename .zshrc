@@ -11,6 +11,7 @@ bindkey "^[[1;5D" backward-word
 bindkey '^H' backward-kill-word
 
 # aliases
+alias land=''
 alias ls='ls --color=auto -F'
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
@@ -46,9 +47,9 @@ HISTFILE="/home/yan/.zsh_history"
 
 # zsh plugins
 source "/home/yan/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-ZSH_HIGHLIGHT_STYLES[suffix-alias]='fg=#8abdb6,underline'
-ZSH_HIGHLIGHT_STYLES[precommand]='fg=#8abdb6,underline'
-ZSH_HIGHLIGHT_STYLES[arg0]='fg=#8abdb6'
+ZSH_HIGHLIGHT_STYLES[suffix-alias]='fg=#3b6c80,underline'
+ZSH_HIGHLIGHT_STYLES[precommand]='fg=#3b6c80,underline'
+ZSH_HIGHLIGHT_STYLES[arg0]='fg=#3b6c80'
 
 source "/home/yan/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#4a4a4a'
