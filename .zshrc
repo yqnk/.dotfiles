@@ -28,6 +28,23 @@ mkcd() {
     mkdir -p "$1" && cd "$1" || return
 }
 
+airpods() {
+    case $1 in
+        on)
+            echo "Connecting AirPods..."
+            bluetoothctl connect F0:D3:1F:79:DA:27
+            ;;
+        off)
+            echo "Disconnecting AirPods..."
+            bluetoothctl disconnect F0:D3:1F:79:DA:27
+            ;;
+        *)
+            echo "Usage: airpods [on|off]"
+            ;;
+    esac
+}
+
+
 # pfetch variables
 export PF_INFO="ascii title os kernel shell wm uptime pkgs memory"
 export PF_COL3=4 # Color for info names
