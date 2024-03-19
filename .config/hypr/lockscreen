@@ -7,7 +7,7 @@ fadein() {
 
     if (( current_brightness > 18000 )); then
         while (( current_brightness > 18000 )); do
-            brightnessctl set "5%-"
+            brightnessctl set "3%-"
             sleep 0.01
             current_brightness=$(brightnessctl get)
         done
@@ -23,7 +23,7 @@ fadeout() {
     current_brightness=$(brightnessctl get)
 
     while (( current_brightness < brightness )); do
-        brightnessctl set "+5%"
+        brightnessctl set "+3%"
         sleep 0.01
         current_brightness=$(brightnessctl get)
     done
