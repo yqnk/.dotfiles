@@ -79,6 +79,14 @@ window#waybar {
     background-color: transparent;
 }
 
+#battery.warning {
+    color: #fabd2f;
+}
+
+#battery.critical {
+    color: #eb4034;
+}
+
 #custom-updater {
   
 }
