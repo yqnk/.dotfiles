@@ -2,9 +2,9 @@
 
 percentage=$(cat /sys/class/power_supply/BAT0/capacity)
 
-if [ "$percentage" -le 5 ]; then
+if [ "$percentage" -eq 5 ]; then
   notify-send -u critical "Very low battery" "${percentage}% remaining"
-elif [ "$percentage" -le 20 ]; then
+elif [ "$percentage" -eq 20 ]; then
   notify-send -u critical "Low battery" "${percentage}% remaining"
 fi
 
