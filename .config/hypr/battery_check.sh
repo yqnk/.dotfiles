@@ -1,22 +1,16 @@
 #!/bin/zsh
 
-if [[ -f /tmp/battery_check.lock ]]; then
-    echo "Already running."
-    exit 1
-fi
+while true; do
+  percentage=$(cat /sys/class/power_supply/BAT0/capacity)
 
-touch /tmp/battery_check.lock
-percentage=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "percentage" | awk '{print $2}' | tr -d '%')
-
-if [ "$percentage" -lt 5 ]; then
-    notify-send -u critical "Low battery" "5% left"
-elif [ "$percentage" -lt 20 ]; then
-    # Envoie une notification critique avec notify-send
-    notify-send -u critical "Low battery" "20% left"
-fi
-
-# Supprime le fichier de verrouillage lorsque le script est terminé
-rm /tmp/battery_check.lock
-
-# Sortie du script après la vérification
+  if [ "$percentage" -le 5 ]; then
+    notify-send -u critical "Very low battery" "${percentage}% remaining"
+    sleep 2000
+  elif [ "$percentage" -le 20 ]; then
+    notify-send -u critical "Low battery" "${percentage}% remaining"
+    sleep 2000
+  else
+    sleep 2000
+  fi
+done;
 exit 0
