@@ -85,6 +85,7 @@
       "format-alt": "{time} {icon}",
       "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"], 
       "tooltip": false,
+      "on-update": "~/.config/hypr/battery_check"
     },
      "cpu": {
         "format": "{usage}% 󰍛 ",
