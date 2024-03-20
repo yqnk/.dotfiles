@@ -157,4 +157,9 @@
         "exec": "wttrbar",
         "return-type": "json"
     },
+
+    "custom/test": {
+        "format": "{}",
+        "exec": "whoami"
+    }
 }
