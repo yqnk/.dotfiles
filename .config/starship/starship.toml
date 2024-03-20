@@ -13,24 +13,24 @@ right_format = '$cmd_duration'
 [cmd_duration]
 min_time = 2000
 format = 'in [$duration]($style)'
-style = '#fabd2f'
+style = '#e5c76b'
 
 [character]
-success_symbol = '[➜](bold #3b6c80)' # #8abdb6
-error_symbol = '[➜](bold #cc6666)' #cc6666
+success_symbol = '[➜](bold #67b0e8)' # #8abdb6
+error_symbol = '[➜](bold #e57474)' #cc6666
 
 [username]
 # style_user = '#938c9c'
 # style_root = '#938c9c'
-style_user = 'bold #515e6e'
-style_root = '#515e6e'
+style_user = 'bold #b3b9b8'
+style_root = '#b3b9b8'
 format = '(#c4c8c5)[$user]($style) '
 disabled = false
 show_always = true
 
 [hostname]
 ssh_only = false
-format = '[$hostname](bold #fabd2f) '
+format = '[$hostname](bold #e5c7cb) '
 disabled = true
 
 [directory]
@@ -43,11 +43,11 @@ style = 'bold white'
 [git_branch]
 symbol = ' '
 format = '[$symbol$branch]($style) '
-style = '#fabd2f'
+style = '#e5c76b'
 
 [git_status]
 format = '[- $all_status$ahead_behind]($style) '
-style = 'bold #fabd2f'
+style = 'bold #dd7aec'
 conflicted = '🏳'
 up_to_date = ' '
 untracked = ' '

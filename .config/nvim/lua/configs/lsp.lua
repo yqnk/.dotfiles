@@ -42,7 +42,6 @@ lspconfig.lua_ls.setup {
   on_init = on_init,
   on_attach = on_attach,
   capabilities = capabilities,
-  auto_start = true,
   settings = {
     Lua = {
       diagnostics = { globals = { "vim" } },

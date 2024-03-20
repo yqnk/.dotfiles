@@ -11,12 +11,12 @@ local options = {
     rust = { "rustfmt" },
   },
   formatters = {
-    shfmt = { prepend_args = { "-i", "4" } }
+    shfmt = { prepend_args = { "-i", "4" } },
   },
   format_on_save = {
-     -- These options will be passed to conform.format()
-     timeout_ms = 500,
-     lsp_fallback = true,
+    -- These options will be passed to conform.format()
+    timeout_ms = 500,
+    lsp_fallback = true,
   },
   -- log_level = vim.log.levels.ERROR,
 }

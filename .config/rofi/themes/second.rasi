@@ -1,22 +1,22 @@
 /* vim: set filetype=css : */
 
-/* everblush */
+/* guweiz */
 * {
   bg-col: #00000075;
   bg-col-light: #1e2229;
   border-col: #9f9f9f99;
   transparent: #00000000;
   selected-col: #1e2229;
-  blue: #67b0e8;
-  cyan: #6cbfbf;
-  green: #8ccf7e;
-  magenta: #dd7aec;
-  red: #e57474;
-  yellow: #e5c76b;
-  hoverbutton: #67b0e8;
+  blue: #80a1bd;
+  cyan: #8abdb6;
+  green: #b5bd68;
+  magenta: #c1aaec;
+  red: #cc6666;
+  yellow: #fabd2f;
+  hoverbutton: #3b6c80;
   fg-col: #c4c5c8;
   fg-col2: #f8f8f8;
-  grey: #b3b9b8;
+  grey: #38474a;
   width: 400;
-placeholder-text: " aaaaaaaaaaaaaaaaaaaaaaaaa";
+  placeholder-text: " sus...";
 }
