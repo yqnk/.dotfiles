@@ -11,6 +11,10 @@ default-timeout=4000
 ignore-timeout=1
 layer=overlay
 
-[urgency=high]
+[urgency=low]
 border-color=#fabd2f
 text-color=#fabd2f
+
+[urgency=high]
+border-color=#c47fd5
+text-color=#c47fd5
