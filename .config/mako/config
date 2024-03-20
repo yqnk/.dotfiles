@@ -9,7 +9,8 @@ max-icon-size=52
 icon-path=/home/yan/downloads/
 default-timeout=4000
 ignore-timeout=1
+layer=overlay
 
 [urgency=high]
-border-color=#cc6666
-text-color=#cc6666
+border-color=#fabd2f
+text-color=#fabd2f
