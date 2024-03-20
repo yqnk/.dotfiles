@@ -17,7 +17,7 @@ style = '#fabd2f'
 
 [character]
 success_symbol = '[➜](bold #3b6c80)' # #8abdb6
-error_symbol = '[➜](bold #cc6666)'
+error_symbol = '[➜](bold #cc6666)' #cc6666
 
 [username]
 # style_user = '#938c9c'
