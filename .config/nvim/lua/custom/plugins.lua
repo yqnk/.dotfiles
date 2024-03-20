@@ -112,6 +112,8 @@ local plugins = {
   },
 
   -- CPP STUFF
+  { "nvim-neotest/nvim-nio" },
+
   {
     "jose-elias-alvarez/null-ls.nvim",
     event = "VeryLazy",
