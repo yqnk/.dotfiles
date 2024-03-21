@@ -18,5 +18,5 @@
   fg-col2: #f8f8f8;
   grey: #b3b9b8;
   width: 400;
-placeholder-text: " aaaaaaaaaaaaaaaaaaaaaaaaa";
+placeholder-text: " made in Rust!";
 }

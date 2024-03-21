@@ -22,7 +22,7 @@ error_symbol = '[➜](bold #e57474)' #cc6666
 [username]
 # style_user = '#938c9c'
 # style_root = '#938c9c'
-style_user = 'bold #b3b9b8'
+style_user = 'bold #3b6c80'
 style_root = '#b3b9b8'
 format = '(#c4c8c5)[$user]($style) '
 disabled = false
