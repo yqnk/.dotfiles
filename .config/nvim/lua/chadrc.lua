@@ -2,7 +2,7 @@
 local M = {}
 
 M.ui = {
-	theme = "everblush",
+  theme = "catppuccin",
   transparency = true,
   cmp = {
     style = "default",

@@ -4,9 +4,10 @@ local options = {
     -- css = { "prettier" },
     -- html = { "prettier" },
 
-    c = { "clang_format" },
-    h = { "clang_format" },
-    cpp = { "clang_format" },
+    -- Don't define so conform falls back to LSP
+    -- c = { "clang_format" },
+    -- h = { "clang_format" },
+    -- cpp = { "clang_format" },
 
     rust = { "rustfmt" },
   },

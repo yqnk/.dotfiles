@@ -13,10 +13,10 @@
   magenta: #dd7aec;
   red: #e57474;
   yellow: #e5c76b;
-  hoverbutton: #67b0e8;
+  hoverbutton: #3b6c80;
   fg-col: #c4c5c8;
   fg-col2: #f8f8f8;
   grey: #38474a;
   width: 400;
-placeholder-text: " 󰗍 run 󰗍 run 󰗍 run 󰗍 run";
+placeholder-text: " hide on bush";
 }

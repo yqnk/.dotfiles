@@ -4,7 +4,7 @@ return {
   filters = {
     custom = { "node_modules", ".git", ".cache" },
     dotfiles = false,
-    exclude = { ".gitignore", ".github" },
+    exclude = { ".github" },
   },
   view = {
     side = "left",
@@ -12,5 +12,5 @@ return {
   renderer = { highlight_git = true },
   sync_root_with_cwd = true,
   respect_buf_cwd = true,
-  update_focused_file = { enable = true, },
+  update_focused_file = { enable = true },
 }

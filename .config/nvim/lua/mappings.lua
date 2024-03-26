@@ -10,7 +10,7 @@ map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 map("n", "<leader>ls", "<cmd> LspStart <CR>", {
   desc = "Start lsp",
 })
-map("n", "<leader>lS", "<cmd> LspStop <CR>", {
+map("n", "<leader>lp", "<cmd> LspStop <CR>", {
   desc = "Stop lsp",
 })
 -- leader quit
