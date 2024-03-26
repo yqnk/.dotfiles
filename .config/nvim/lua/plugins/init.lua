@@ -26,7 +26,7 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
-      require "nvchad.configs.lspconfig"
+      require("nvchad.configs.lspconfig").defaults()
       require "configs.lsp"
     end, -- Override to setup mason-lspconfig
   },
