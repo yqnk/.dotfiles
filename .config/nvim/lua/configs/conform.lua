@@ -9,7 +9,7 @@ local options = {
     -- h = { "clang_format" },
     -- cpp = { "clang_format" },
 
-    rust = { "rustfmt" },
+    rust = { "rustfmt" }, -- its not fucking deprecated
   },
   formatters = {
     shfmt = { prepend_args = { "-i", "4" } },

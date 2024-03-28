@@ -6,6 +6,11 @@ map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
+-- mason
+map("n", "<leader>ma", "<cmd> MasonInstallAll <CR>", {
+  desc = "Mason install all",
+})
+
 -- toggle lsp
 map("n", "<leader>ls", "<cmd> LspStart <CR>", {
   desc = "Start lsp",
@@ -40,7 +45,7 @@ map("v", "<A-k>", ":move '<-2<CR>gv-gv", {
 -- paste better
 map("i", "<C-v>", '<esc>"+pi', { desc = "Paste from clipboard" })
 
--- duplicate line
+-- duplicate line NOT WORKING
 map({ "i", "n" }, "<C-d>", "<cmd> yyp <CR>", { desc = "Duplicate single line" })
 
 local unmap = vim.keymap.del
