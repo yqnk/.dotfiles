@@ -14,8 +14,8 @@ fadein() {
     fi
 }
 
-fadein &
-hyprlock &
+fadein
+hyprlock
 
 wait
 
