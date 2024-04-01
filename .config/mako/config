@@ -13,8 +13,6 @@ layer=overlay
 
 [urgency=low]
 border-color=#fabd2f
-text-color=#fabd2f
 
 [urgency=high]
 border-color=#eb4034
-text-color=#eb4034
