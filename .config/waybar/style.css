@@ -1,5 +1,5 @@
 @define-color fgcolor #ffffff;
-@define-color bgcolor #222436;
+@define-color bgcolor #1F1F1F;
 
 @define-color color0 #3b6c80;
 
@@ -25,7 +25,7 @@ window {
 }
 
 window#waybar {
-  background-color: alpha(#1f1f1f, 0.6); 
+  background-color: alpha(@bgcolor, 0.7);
   transition-duration: .5s;
   border-radius: 7px;
 }
