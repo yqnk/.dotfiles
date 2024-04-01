@@ -17,6 +17,7 @@
   fg-col: #c4c5c8;
   fg-col2: #f8f8f8;
   grey: #38474a;
+  placeholder-color: #b0b0b0;
   width: 400;
   placeholder-text: " sus...";
 }

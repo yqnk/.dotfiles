@@ -18,5 +18,6 @@
   fg-col2: #f8f8f8;
   grey: #38474a;
   width: 400;
-placeholder-text: " firefox, uh ?";
+  placeholder-color: #808080;
+placeholder-text: " awesome!";
 }
