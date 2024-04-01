@@ -2,7 +2,7 @@
 
 /* everblush */
 * {
-  bg-col: #00000075;
+  bg-col: #00000085;
   bg-col-light: #1e2229;
   border-col: #9f9f9f99;
   transparent: #00000000;
@@ -18,5 +18,5 @@
   fg-col2: #f8f8f8;
   grey: #38474a;
   width: 400;
-placeholder-text: " hide on bush";
+placeholder-text: " firefox, uh ?";
 }
