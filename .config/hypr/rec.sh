@@ -1,0 +1,6 @@
+#! /usr/bin/env zsh
+
+current_date=$(date +'%Y-%m-%d_%H:%M:%S')
+records_dir="$HOME/documents/records"
+mkdir -p $records_dir
+wf-recorder -b 0 -c libx264 -p b=5M -f $records_dir/recording_$current_date.mp4
