@@ -1,134 +1,194 @@
-* { 
-    font-family: 'Jetbrains Mono Nerd Font', Roboto, Helvetica, Arial, sans-serif;
-    font-size: 10px;
-    font-weight: bold;
-    min-height: 16px;
+@define-color fgcolor #ffffff;
+@define-color bgcolor #222436;
+
+@define-color color0 #3b6c80;
+
+@define-color color1 #86aad7;
+/* light blue */
+@define-color color2 #ff9e64;
+/* orange */
+@define-color color3 #ee9ff9;
+/* purple */
+@define-color color4 #ff7a7a;
+/* light red */
+
+
+* {
+  font-family: 'Jetbrains Mono Nerd Font';
+  font-size: 10px;
+  font-weight: bold;
+  min-height: 16px;
 }
 
-window#waybar {	
-    background-color: alpha(#000000, 0.3);
-    color: white;
-    transition-property: background-color;
-    transition-duration: .5s;
-    border-radius: 15px 15px 15px 15px;
+window {
+  border-radius: 15px 15px 15px 15px;
+}
+
+window#waybar {
+  background-color: alpha(#1f1f1f, 0.6); 
+  transition-duration: .5s;
+  border-radius: 7px;
+}
+
+#waybar.empty #window {
+  background: none;
+}
+
+.modules-left {
+  margin-left: 2px;
+}
+
+.modules-right {
+  margin-right: 2px;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  background: transparent;
+  margin: 2px;
 }
 
 #workspaces {
   background: transparent;
-    margin-right: 3px;
-	  border-radius: 15px;
-    opacity: 0.88;
+  margin-right: -3px;
+  margin-left: -3px;
+  opacity: 0.88;
 }
 
 #workspaces button {
-    color: white;
-    font-weight: normal;
-    margin: 0px;
-	  padding: 0 1px;
-	  border: none;
+  color: grey;
+  font-weight: normal;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 9px;
+  box-shadow: none;
+  text-shadow: none;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button:hover {
-	border: none;	
-	background: transparent;
-	color: white;
-	font-weight: bold;
-	border-radius: 15px;
-	border-top: 1px solid white;
+  border: none;
+  background: transparent;
+  color: white;
+  font-weight: bold;
+  border-radius: 15px;
 }
 
 #workspaces button.active {
-	background: transparent;
-	color: white;
-	font-weight: bold;
+  background: transparent;
+  color: @fgcolor;
+  font-weight: bold;
 }
 
 #clock {
-    background-color: transparent;
-    color: white;
-    border-radius: 0px 0px 0px 0px;
-    /*margin-right: 4px;*/
+  background-color: transparent;
+  color: @fgcolor;
+  border-radius: 0px 0px 0px 0px;
 }
 
 #network {
-    background-color: transparent;
-    color: white;
-    border-radius: 15px;
-    margin-right: 4px;
-    padding-left: 10px;
+  background-color: transparent;
+  color: @fgcolor;
+  padding-right: 14px;
 }
-
-#custom-weather {
-  padding-left: 10px;
-}
-
-/* #network.disconnected {
-	background-color: transparent;
-	color: #white;
-} */
 
 #battery {
-    background-color: transparent;
-    color: white;
-	  padding-right: 10px; 
+  background-color: transparent;
+  color: @fgcolor;
 }
 
-#battery.charging, #battery.plugged {
-    color: white;
-    background-color: transparent;
+#battery.charging,
+#battery.plugged {
+  color: white;
+  background-color: transparent;
 }
 
 #battery.warning {
-    color: #fabd2f;
+  color: @color2;
 }
 
 #battery.critical {
-    color: #eb4034;
+  color: @color4;
 }
 
 #custom-updater {
-  
+  color: @fgcolor;
 }
 
-#custom-pipe {
+#custom-sep {
+  color: #606060;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+#custom-whitesep {
+  color: @fgcolor;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+#custom-bracketl,
+#custom-bracketr {
+  color: @fgcolor;
   margin-left: 4px;
   margin-right: 4px;
 }
 
 @keyframes blink {
-    to {
-        background-color: transparent;
-        color: white;
-    }
+  to {
+    background-color: transparent;
+    color: white;
+  }
 }
 
 #battery.critical:not(.charging) {
-    background-color: transparent;
-    color: red;
+  background-color: transparent;
+  color: red;
 }
 
 label:focus {
-    background-color: transparent;
+  background-color: transparent;
 }
 
-#temperature,
-#memory,
-#disk,
 #cpu {
-    background-color: transparent;
-    color: white;
-    /* margin-left: -6px;
-    margin-right: -6px; */
-    padding-left: 2px;
-	padding-right: 2px;
+  color: @fgcolor;
+}
+
+#temperature {
+  color: @fgcolor;
+}
+
+#memory {
+  color: @fgcolor;
+}
+
+#disk {
+  color: @fgcolor;
+}
+
+#disk,
+#cpu,
+#memory {
+  padding-right: 7px;
 }
 
 #temperature.critical {
-    color: red;
+  color: @color4;
 }
 
 #pulseaudio {
-    background-color: transparent;
-    color: white;
+  background-color: transparent;
+  color: @fgcolor;
+  margin-right: 7px;
+}
+
+#custom-menu {
+  color: @fgcolor;
+  padding-left: 8px;
+}
+
+#custom-user {
+  color: @fgcolor;
+  padding-left: 8px;
 }

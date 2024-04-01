@@ -1,0 +1,166 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 16,
+    "spacing": 4,
+    "margin-top": 4,
+    "margin-bottom": 0,
+    "margin-left": 4,
+    "margin-right": 4,
+
+    // Modules
+    "modules-left":["network", "custom/pipe", "hyprland/workspaces", "custom/pipe", "custom/updater"],
+    "modules-center":["clock"],
+    "modules-right":["cpu", "memory", "temperature", "custom/pipe", "pulseaudio", "custom/pipe", "battery"],
+	
+"hyprland/workspaces": {
+	  "active-only": false,
+    "all-outputs": true, 
+    "format": "{icon}",
+    "show-special": false,
+    "on-click": "activate",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+    },
+    "format-icons": {
+      "active": "",
+      "default": "",
+	},  
+},
+
+"hyprland/workspaces#pacman": {
+    "active-only":false,
+    "all-outputs": true,
+    "format": "{icon}",
+    "on-click": "activate",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "show-special": false,
+    "persistent-workspaces":{
+        "1": [],
+        "2": [],
+        "3": [],
+        "4": [],
+        "5": [],
+    },
+    "format": "{icon}",
+    "format-icons": {
+      "active": " 󰮯 ",
+      "default": "󰊠",
+      "persistent":"󰊠",
+    },
+},
+
+    // https://howardhinnant.github.io/date/date.html#to_stream_formatting
+    "clock": {
+      "interval": 5,
+		  "tooltip": false,
+		  "format": "{:%H:%M - %d/%b}",
+      "format-alt": "{:%H:%M:%S - %d/%b}",
+		  "timezone": "Canada/Eastern",
+    },
+    "network": {
+      "interface": "wlp165s0",
+	    "format": "...",
+      "format-wifi": "",
+      "format-ethernet": "",
+      "format-disconnected": "-",
+	    "tooltip": false,
+	    "max-length": 3,
+      "on-click": "nm-connection-editor",
+    },
+    "battery": {
+        "states": {
+          "good": 95,
+          "warning": 20,
+          "critical": 5,
+        },
+      "format": "{capacity}% {icon}",
+      "format-charging": "{capacity}% ",
+      "format-plugged": "{capacity}% ",
+      "format-alt": "{time} {icon}",
+      "format-charging-alt": "{time} {icon}",
+      "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"], 
+      "tooltip": false,
+      "on-update": "~/.config/hypr/battery_check"
+    },
+     "cpu": {
+        "format": "{usage}% 󰍛 ",
+        "tooltip": false,
+        "on-click": "kitty -T update btop",
+    },
+    "memory": {
+        "tooltip": false,
+        "interval": 10,
+        "format": "{used:0.1f}G 󰾆 ",
+        "format-alt": "{percentage}% 󰾆 ",
+        "on-click": "kitty -T update btop",
+    },
+    "temperature": {
+        "thermal-zone": 7,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "tooltip": false,
+        "format-icons": ["󰈸"],
+        "on-click": "kitty -T update btop",
+    },
+    "disk": {
+      "interval": 30,
+      "path": "/",
+      "format": "{percentage-used}% /",
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% ",
+        "format-bluetooth-muted": "- ",
+        "format-muted": "- {format_source}",
+        "format-source": "",
+        "format-source-muted": "",
+        // "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""],
+        },
+        "on-click": "pavucontrol",
+		    "tooltip": false,
+    },
+
+    "custom/pipe": {
+        "format": "|",
+        "interval": "once",
+        "tooltip": false
+    },
+
+    "custom/updater":{
+        "format": " {}",
+        "exec": "checkupdates | wc -l",
+        "exec-if": "[[ $(checkupdates | wc -l) ]]",
+        "interval": 21600,
+        "on-click": "kitty -T update paru -Syu && checkupdates | wc -l",
+        "tooltip": false,
+    },
+
+    "custom/weather": {
+        "format": "{}°C",
+        "tooltip": false, // true gives a lot of useful information tho !!!
+        "interval": 3600,
+        "exec": "wttrbar",
+        "return-type": "json"
+    },
+
+    "custom/test": {
+        "format": "{}",
+        "exec": "whoami"
+    }
+}

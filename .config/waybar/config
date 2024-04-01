@@ -1,166 +1,201 @@
-{
-    "layer": "top",
-    "position": "top",
-    "height": 16,
-    "spacing": 4,
-    "margin-top": 4,
-    "margin-bottom": 0,
-    "margin-left": 4,
-    "margin-right": 4,
+[
+  {
+      "layer": "top",
+      "position": "top",
+      "height": 16,
+      "spacing": 4,
+      "margin-top": 4,
+      "margin-bottom": 0,
+      "margin-left": 4,
+      "margin-right": 4,
+      "fixed-center": true,
+      "ipc": false,
 
-    // Modules
-    "modules-left":["network", "custom/pipe", "hyprland/workspaces", "custom/pipe", "custom/updater"],
-    "modules-center":["clock"],
-    "modules-right":["cpu", "memory", "temperature", "custom/pipe", "pulseaudio", "custom/pipe", "battery"],
-	
-"hyprland/workspaces": {
-	  "active-only": false,
-    "all-outputs": true, 
-    "format": "{icon}",
-    "show-special": false,
-    "on-click": "activate",
-    "on-scroll-up": "hyprctl dispatch workspace e+1",
-    "on-scroll-down": "hyprctl dispatch workspace e-1",
-    "persistent-workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-    },
-    "format-icons": {
-      "active": "",
-      "default": "",
-	},  
-},
+      // Modules
+      "modules-left": [
+        "custom/user",
+        "custom/sep",
+        "battery",
+        "custom/sep",
+        "disk",
+        "memory",
+        "cpu",
+        "temperature"
+      ],
 
-"hyprland/workspaces#pacman": {
-    "active-only":false,
-    "all-outputs": true,
-    "format": "{icon}",
-    "on-click": "activate",
-    "on-scroll-up": "hyprctl dispatch workspace e+1",
-    "on-scroll-down": "hyprctl dispatch workspace e-1",
-    "show-special": false,
-    "persistent-workspaces":{
-        "1": [],
-        "2": [],
-        "3": [],
-        "4": [],
-        "5": [],
-    },
-    "format": "{icon}",
-    "format-icons": {
-      "active": " 󰮯 ",
-      "default": "󰊠",
-      "persistent":"󰊠",
-    },
-},
+      "modules-center": [
+        "custom/bracketl",
+        "hyprland/workspaces",
+        "custom/bracketr"
+      ],
 
-    // https://howardhinnant.github.io/date/date.html#to_stream_formatting
-    "clock": {
-      "interval": 5,
-		  "tooltip": false,
-		  "format": "{:%H:%M - %d/%b}",
-      "format-alt": "{:%H:%M:%S - %d/%b}",
-		  "timezone": "Canada/Eastern",
-    },
-    "network": {
-      "interface": "wlp165s0",
-	    "format": "...",
-      "format-wifi": "",
-      "format-ethernet": "",
-      "format-disconnected": "-",
-	    "tooltip": false,
-	    "max-length": 3,
-      "on-click": "nm-connection-editor",
-    },
-    "battery": {
-        "states": {
-          "good": 95,
-          "warning": 20,
-          "critical": 5,
+      "modules-right": [
+        "custom/updater",
+        "custom/sep",
+        "pulseaudio",
+        "clock",
+        "custom/sep",
+        "network"
+      ],
+
+      "hyprland/workspaces": {
+        "active-only": false,
+        "all-outputs": true,
+        "format": "{icon}",
+        "show-special": false,
+        "on-click": "activate",
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "persistent-workspaces": {
+          "1": [],
+          "2": [],
+          "3": []
         },
-      "format": "{capacity}% {icon}",
-      "format-charging": "{capacity}% ",
-      "format-plugged": "{capacity}% ",
-      "format-alt": "{time} {icon}",
-      "format-charging-alt": "{time} {icon}",
-      "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"], 
-      "tooltip": false,
-      "on-update": "~/.config/hypr/battery_check"
-    },
-     "cpu": {
-        "format": "{usage}% 󰍛 ",
+        "format-icons": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10"
+        }
+      },
+
+      "battery": {
+        "align": 0,
+        "rotate": 0,
+        "full-at": 100,
+        "good": 95,
+        "warning": 20,
+        "critical": 5,
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% 󱘖 ",
+        "format-alt": "{time} {icon}",
+        "format-charging-alt": "{time} {icon}",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "format-time": "{H}h {M}min",
         "tooltip": false,
-        "on-click": "kitty -T update btop",
-    },
-    "memory": {
+        "on-update": "~/.config/hypr/battery_check"
+      },
+
+      // https://howardhinnant.github.io/date/date.html#to_stream_formatting
+      "clock": {
+        "interval": 5,
         "tooltip": false,
-        "interval": 10,
-        "format": "{used:0.1f}G 󰾆 ",
-        "format-alt": "{percentage}% 󰾆 ",
+        "format": " {:%H:%M   %d/%b}",
+        "format-alt": " {:%H:%M:%S   %d/%b}",
+        "timezone": "Canada/Eastern"
+      },
+
+      "cpu": {
+        "format": "{usage}% 󰍛",
         "on-click": "kitty -T update btop",
-    },
-    "temperature": {
+        "tooltip": true
+      },
+      
+      "disk": {
+        "interval": 60,
+        "path": "/",
+        "format": "{percentage_used}% 󰋊",
+        "tooltip": true,
+        "tooltip-format": "{used} used out of {total} on {path} ({percentage_used}%)"
+      },
+
+      "memory": {
+          "interval": 10,
+          "format": "{used:0.1f}G 󰾆",
+          "format-alt": "{percentage}% 󰾆",
+          "tooltip": true,
+          "tooltip-format": "{used:0.1f}G used out of {total:0.1f}G"
+      },
+      "temperature": {
         "thermal-zone": 7,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
         "tooltip": false,
         "format-icons": ["󰈸"],
-        "on-click": "kitty -T update btop",
-    },
-    "disk": {
-      "interval": 30,
-      "path": "/",
-      "format": "{percentage-used}% /",
-    },
-    "pulseaudio": {
-        "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% ",
-        "format-bluetooth-muted": "- ",
-        "format-muted": "- {format_source}",
-        "format-source": "",
-        "format-source-muted": "",
-        // "format-source-muted": "",
-        "format-icons": {
+        "on-click": "kitty -T update btop"
+      },
+
+      "network": {
+        "interface": "wlp165s0",
+        "format": "{icon}",
+        "format-wifi": "{icon}",
+        "format-ethernet": "",
+        "format-disconnected": "-",
+        "tooltip": false,
+        "max-length": 3,
+        "on-click": "nm-connection-editor",
+        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"]
+      },
+
+      "pulseaudio": {
+          "format": "{volume}% {icon}",
+          "format-bluetooth": "{volume}% ",
+          "format-bluetooth-muted": "- ",
+          "format-muted": "- {format_source}",
+          "format-source-muted": "󰖁",
+          "format-icons": {
             "headphone": "",
             "hands-free": "",
             "headset": "",
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""],
-        },
-        "on-click": "pavucontrol",
-		    "tooltip": false,
-    },
+            "default": ["", "", "󰕾", ""]
+          },
+          "on-click": "pavucontrol",
+          "tooltip": false
+      },
 
-    "custom/pipe": {
-        "format": "|",
+      "custom/sep": {
+          "format": "|",
+          "interval": "once",
+          "tooltip": false
+      },
+
+      "custom/whitesep": {
+          "format": "|",
+          "interval": "once",
+          "tooltip": false
+      },
+
+      "custom/bracketl": {
+        "format": "[",
         "interval": "once",
         "tooltip": false
-    },
+      },
+     
+      "custom/bracketr": {
+        "format": "]",
+        "interval": "once",
+        "tooltip": false
+      },
 
-    "custom/updater":{
-        "format": " {}",
-        "exec": "checkupdates | wc -l",
-        "exec-if": "[[ $(checkupdates | wc -l) ]]",
-        "interval": 21600,
-        "on-click": "kitty -T update paru -Syu && checkupdates | wc -l",
-        "tooltip": false,
-    },
 
-    "custom/weather": {
-        "format": "{}°C",
-        "tooltip": false, // true gives a lot of useful information tho !!!
-        "interval": 3600,
-        "exec": "wttrbar",
-        "return-type": "json"
-    },
+      "custom/updater": {
+          "format": " {}",
+          "exec": "checkupdates | wc -l",
+          "exec-if": "[[ $(checkupdates | wc -l) ]]",
+          "interval": 21600,
+          "on-click": "kitty -T update paru -Syu notify-send 'The system has been updated'",
+          "tooltip": false
+      },
+      "custom/menu": {
+        "format": "󰣇 {}",
+        "exec": "whoami",
+        "tooltip": false
+      },
 
-    "custom/test": {
-        "format": "{}",
-        "exec": "whoami"
-    }
-}
+      "custom/user": {
+          "format": "{}",
+          "exec": "whoami"
+      }
+  }
+]
