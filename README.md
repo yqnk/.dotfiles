@@ -13,5 +13,5 @@ $ ln -s ~/dotfiles/wallpapers ~/.local/share/wallpapers
 $ ln -s ~/dotfiles/icons ~/.local/share/icons
 
 # Install fonts
-$$ sudo pacman -S --needed - < fonts.txt
+$ sudo pacman -S --needed - < fonts.txt
 ```
