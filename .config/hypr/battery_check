@@ -14,11 +14,11 @@ if [ "$is_discharging" -eq 0 ]; then
     rm $filename_critical
   fi
 else
-if [ "$percentage" -eq 5 ] && [ ! -f "$filename_critical" ]; then
-    notify-send -u critical "Very low battery" "${percentage}% remaining"
+  if [ "$percentage" -eq 5 ] && [ ! -f "$filename_critical" ]; then
+    notify-send -u critical "Very low battery" "${percentage}% remaining :(" # icons not working :(
     touch $filename_critical 
-elif [ "$percentage" -eq 25 ] && [ ! -f "$filename_low" ]; then
-    notify-send -u low "Low battery" "${percentage}% remaining" 
+  elif [ "$percentage" -eq 20 ] && [ ! -f "$filename_low" ]; then
+    notify-send -u low "Low battery" "${percentage}% remaining :(" #icons not working :( 
     touch $filename_low
   fi
 fi
