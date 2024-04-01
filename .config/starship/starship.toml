@@ -16,13 +16,13 @@ format = 'in [$duration]($style)'
 style = '#e5c76b'
 
 [character]
-success_symbol = '[➜](bold #8abdb6)' # #8abdb6
-error_symbol = '[➜](bold #e57474)' #cc6666
+success_symbol = '[➜](bold #b5bd68)' # #8abdb6
+error_symbol = '[➜](bold #cc6666)' #cc6666
 
 [username]
 # style_user = '#938c9c'
 # style_root = '#938c9c'
-style_user = 'bold #3b6c80'
+style_user = 'bold #c4c8c5' # #3b6c80'
 style_root = '#b3b9b8'
 format = '(#c4c8c5)[$user]($style) '
 disabled = false
@@ -47,7 +47,7 @@ style = '#e5c76b'
 
 [git_status]
 format = '[- $all_status$ahead_behind]($style) '
-style = 'bold #dd7aec'
+style = 'bold #b294bb'
 conflicted = '🏳'
 up_to_date = ' '
 untracked = ' '
