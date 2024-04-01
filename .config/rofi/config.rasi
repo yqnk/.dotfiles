@@ -15,9 +15,11 @@ configuration {
   display-drun: "󰗍 run";
 }
 
-element-text, element-icon , mode-switcher {
+element-text,
+element-icon,
+mode-switcher {
   background-color: inherit;
-  text-color:       inherit;
+  text-color: inherit;
 }
 
 window {
@@ -36,7 +38,7 @@ mainbox {
 }
 
 inputbar {
-  children: [prompt,entry];
+  children: [prompt, entry];
   background-color: @transparent;
   color: @green;
   border-radius: 4px;
@@ -63,7 +65,7 @@ entry {
   background-color: @transparent;
   color: @fg-col;
   placeholder: @placeholder-text;
-  placeholder-color: @placeholder-color; 
+  placeholder-color: @placeholder-color;
 }
 
 listview {
@@ -88,7 +90,7 @@ element-icon {
 element selected {
   border-radius: 5px;
   text-color: #000000;
-  background-color: @hoverbutton;
+  background-color: @yellow;
 }
 
 mode-switcher {
@@ -99,7 +101,7 @@ button {
   padding: 10px;
   background-color: @bg-col-light;
   text-color: @grey;
-  vertical-align: 0.5; 
+  vertical-align: 0.5;
   horizontal-align: 0.5;
 }
 
