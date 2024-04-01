@@ -65,12 +65,12 @@ HISTFILE="/home/yan/.zsh_history"
 # zsh plugins
 source "/home/yan/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 # custom highlight : see https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters/main.md
-ZSH_HIGHLIGHT_STYLES[suffix-alias]='fg=#3b6c80,underline'
-ZSH_HIGHLIGHT_STYLES[precommand]='fg=#c47fd5,underline'
-ZSH_HIGHLIGHT_STYLES[arg0]='fg=#3b6c80'
-ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=#8ccf7e'
-ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=#8ccf7e'
-ZSH_HIGHLIGHT_STYLES[redirection]='fg=#c47fd5'
+ZSH_HIGHLIGHT_STYLES[suffix-alias]='fg=#b294bb,underline'
+ZSH_HIGHLIGHT_STYLES[precommand]='fg=#b294bb,underline'
+ZSH_HIGHLIGHT_STYLES[arg0]='fg=#b294bb'
+ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=#b5bd68'
+ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=#b5bd68'
+ZSH_HIGHLIGHT_STYLES[redirection]='fg=#b294bb'
 
 
 source "/home/yan/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
