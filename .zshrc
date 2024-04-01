@@ -23,6 +23,7 @@ alias cls='clear'
 alias py='python3'
 alias asciiquarium='asciiquarium -t -s'
 alias rl='~/rustlings/target/release/rustlings'
+alias wf-recorder='~/.config/hypr/rec.sh'
 
 # custom commands
 mkcd() {
