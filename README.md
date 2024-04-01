@@ -7,5 +7,5 @@
 mv wallpapers/ ~/.local/share/wallpapers/
 
 # Install fonts
-sudo pacman -S --needed - < fonts.text
+sudo pacman -S --needed - < fonts.txt
 ```
