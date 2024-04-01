@@ -3,8 +3,14 @@
 
 ## Install
 ```sh
+$ git clone git@github.com:yqnk/.dotfiles.git ~/dotfiles
+$ cd
+
 # Install wallpapers
-mv wallpapers/ ~/.local/share/wallpapers/
+$ ln -s ~/dotfiles/wallpapers ~/.local/share/wallpapers
+
+# Install icons
+$ ln -s ~/dotfiles/icons ~/.local/share/icons
 
 # Install fonts
 sudo pacman -S --needed - < fonts.txt

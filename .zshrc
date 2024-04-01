@@ -1,5 +1,6 @@
 # global variables
 export STARSHIP_CONFIG="/home/yan/.config/starship/starship.toml"
+export ICONS="/home/yan/.local/share/icons"
 export WALLPAPERS="/home/yan/.local/share/wallpapers"
 export LS_COLORS="ow=01;37:di=01;37:ex=01;32:*.png=01;33:*.svg=01;33:*.jpeg=01;33:*.jpg=01;33"
 
