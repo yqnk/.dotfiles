@@ -59,7 +59,7 @@ unsetopt beep # disable beep on completion when pressing TAB
 eval "$(starship init zsh)"
 
 # zsh history
-SAVEHIST=1000 # save 1000 most-recent lines
+SAVEHIST=2000 # save 2000 most-recent lines
 HISTFILE="/home/yan/.zsh_history"
 
 # zsh plugins
