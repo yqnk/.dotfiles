@@ -6,7 +6,7 @@ local capabilities = configs.capabilities
 
 local lspconfig = require "lspconfig"
 
-local servers = { "html", "cssls" }
+local servers = { "html", "cssls", "cmake" }
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do
@@ -57,6 +57,12 @@ lspconfig.lua_ls.setup {
       },
     },
   },
+}
+
+lspconfig.autotools_ls.setup {
+  on_init = on_init,
+  on_attach = on_attach,
+  capabilities = capabilities,
 }
 
 -- rust, see https://rust-analyzer.github.io/manual.html#nvim-lsp

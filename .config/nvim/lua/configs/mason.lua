@@ -13,5 +13,9 @@ return {
 
     -- rust
     "rust-analyzer",
+
+    -- make etc
+    "autotools-language-server", -- autotools_ls
+    "cmake-language-server",
   },
 }
