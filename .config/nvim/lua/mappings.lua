@@ -13,10 +13,13 @@ map("n", "<leader>ma", "<cmd> MasonInstallAll <CR>", {
 
 -- toggle lsp
 map("n", "<leader>ls", "<cmd> LspStart <CR>", {
-  desc = "Start lsp",
+  desc = "Lsp start",
 })
 map("n", "<leader>lq", "<cmd> LspStop <CR>", {
-  desc = "Stop lsp",
+  desc = "Lsp stop",
+})
+map("n", "<leader>lr", "<cmd> LspRestart <CR>", {
+  desc = "Lsp restart",
 })
 -- leader quit
 map("n", "<leader>Q", "<cmd> qall <CR>", {
