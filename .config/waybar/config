@@ -24,9 +24,9 @@
       ],
 
       "modules-center": [
-        "custom/bracketl",
-        "hyprland/workspaces",
-        "custom/bracketr"
+        // "custom/bracketl",
+        "hyprland/workspaces"
+        // "custom/bracketr"
       ],
 
       "modules-right": [
