@@ -184,7 +184,7 @@
           "exec": "checkupdates | wc -l",
           "exec-if": "[[ $(checkupdates | wc -l) ]]",
           "interval": 21600,
-          "on-click": "kitty -T update paru -Syu notify-send 'The system has been updated'",
+          "on-click": "kitty -T update paru -Syu",
           "tooltip": false
       },
       "custom/menu": {
