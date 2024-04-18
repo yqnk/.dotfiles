@@ -78,6 +78,10 @@ return {
   },
 
   {
+    "RaafatTurki/hex.nvim",
+  },
+
+  {
     "saecki/crates.nvim",
     event = { "BufRead Cargo.toml" },
     config = function()
