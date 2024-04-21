@@ -20,6 +20,8 @@
         "disk",
         "memory",
         "cpu",
+        // "custom/firefox",
+        // "custom/sep",
         "temperature"
       ],
 
@@ -187,6 +189,15 @@
           "on-click": "kitty -T update paru -Syu",
           "tooltip": false
       },
+      
+      "custom/firefox": {
+        "format": "{:.20} ♫",
+        "exec": "playerctl -p firefox metadata title",
+        "on-click": "playerctl play-pause",
+        "interval": 180,
+        "tooltip": false
+      },
+
       "custom/menu": {
         "format": "󰣇 {}",
         "exec": "whoami",
