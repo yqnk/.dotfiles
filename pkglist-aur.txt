@@ -1,0 +1,8 @@
+asciiquarium-transparent-git
+cava
+grimblast-git
+paru
+paru-debug
+pfetch
+rofi-lbonn-wayland
+xxd-standalone
