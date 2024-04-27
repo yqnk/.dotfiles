@@ -14,4 +14,7 @@ $ ln -s ~/dotfiles/icons ~/.local/share/icons
 
 # Install fonts
 $ sudo pacman -S --needed - < fonts.txt
+
+# Install packages in pkglist.txt
+cat pkglist.txt | xargs sudo pacman -S --needed --
 ```

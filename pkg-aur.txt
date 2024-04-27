@@ -1,7 +1,0 @@
-asciiquarium-transparent-git r24.cfe288e-1
-hyprpicker 0.2.0-2
-hyprshot 1.2.3-1
-paru 2.0.3-1
-paru-debug 2.0.1-1
-pfetch 0.6.0-3
-rofi-lbonn-wayland 1.7.5+wayland3-1
