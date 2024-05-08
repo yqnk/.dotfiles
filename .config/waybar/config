@@ -91,7 +91,7 @@
         "tooltip": false,
         "format": " {:%H:%M   %d/%b}",
         "format-alt": " {:%H:%M:%S   %d/%b}",
-        "timezone": "Canada/Eastern"
+        // "timezone": "Canada/Eastern"
       },
 
       "cpu": {
