@@ -1,6 +1,7 @@
 require "nvchad.mappings"
 
 local map = vim.keymap.set
+local unmap = vim.keymap.del
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
@@ -51,6 +52,5 @@ map("i", "<C-v>", '<esc>"+pi', { desc = "Paste from clipboard" })
 -- duplicate line NOT WORKING
 map({ "i", "n" }, "<C-d>", "<cmd> yyp <CR>", { desc = "Duplicate single line" })
 
-local unmap = vim.keymap.del
-
+-- dijkstra =(
 unmap("i", "jk")

@@ -88,4 +88,13 @@ return {
       require("crates").setup()
     end,
   },
+
+  {
+    dir = "~/projects/mini-projects/hexa",
+    name = "hexa",
+    lazy = false,
+    config = function()
+      require "hexconfig"
+    end,
+  },
 }
