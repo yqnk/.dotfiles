@@ -28,6 +28,11 @@ alias rl='~/rustlings/target/release/rustlings'
 alias wf-recorder='~/.config/hypr/rec.sh'
 
 # custom commands
+
+mvcd() {
+  mv $1 $2 && cd $2
+}
+
 mkcd() {
     mkdir -p "$1" && cd "$1" || return
 }
