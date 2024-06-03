@@ -50,8 +50,6 @@
         "on-scroll-down": "hyprctl dispatch workspace e-1",
         "persistent-workspaces": {
           "1": [],
-          "2": [],
-          "3": []
         },
         "format-icons": {
           "1": "1",
