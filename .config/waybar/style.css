@@ -49,6 +49,11 @@ window#waybar {
   margin: 2px;
 }
 
+#language {
+  color: white;
+  padding-left: 8px; 
+}
+
 #workspaces {
   background: transparent;
   margin-right: -3px;

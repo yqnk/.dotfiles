@@ -13,7 +13,8 @@
 
       // Modules
       "modules-left": [
-        "custom/user",
+        // "custom/user",
+        "hyprland/language",
         "custom/sep",
         "battery",
         "custom/sep",
@@ -39,6 +40,11 @@
         "custom/sep",
         "network"
       ],
+      
+      "hyprland/language": {
+        "format-fr": "fr",
+        "format-en": "en"
+      },
 
       "hyprland/workspaces": {
         "active-only": false,
