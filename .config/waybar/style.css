@@ -51,7 +51,8 @@ window#waybar {
 
 #language {
   color: white;
-  padding-left: 8px; 
+  padding-left: 8px;
+  margin-right: -2px;
 }
 
 #workspaces {
