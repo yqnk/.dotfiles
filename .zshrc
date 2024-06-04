@@ -52,7 +52,7 @@ airpods() {
             bluetoothctl remove F0:D3:1F:79:DA:27
             ;;
         *)
-            echo "Usage: airpods [on|off]"
+            echo "Usage: airpods [on|off|forget]"
             ;;
     esac
 }
