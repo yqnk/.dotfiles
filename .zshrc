@@ -29,6 +29,10 @@ alias wf-recorder='~/.config/hypr/rec.sh'
 
 # custom commands
 
+..() {
+  cd ..
+}
+
 mvcd() {
   mv $1 $2 && cd $2
 }
