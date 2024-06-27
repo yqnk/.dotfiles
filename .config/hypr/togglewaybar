@@ -1,3 +1,5 @@
-# !/bin/env zsh
+#! /usr/bin/env zsh
 
 if ! killall -9 waybar; then waybar; fi
+
+exit 0

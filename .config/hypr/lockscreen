@@ -31,3 +31,4 @@ fadeout() {
 
 fadeout
 
+exit 0
