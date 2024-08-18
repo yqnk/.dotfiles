@@ -41,6 +41,19 @@ mkcd() {
     mkdir -p "$1" && cd "$1" || return
 }
 
+mountafs() {
+  echo "Warning: you may need a new ticket: kinit -f yan.bertile@CRI.EPITA.FR"
+  cd
+  mkdir -p "afs"
+  sshfs -o reconnect yan.bertile@ssh.cri.epita.fr:/afs/cri.epita.fr/user/y/ya/yan.bertile/u/ afs
+  cd "afs"
+}
+
+umountafs() {
+  cd
+  umount afs
+}
+
 airpods() {
     case $1 in
         on)
