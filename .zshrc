@@ -75,10 +75,42 @@ airpods() {
 }
 
 togif() {
-  ffmpeg -y -i "${1}" -vf fps=${3:-10},scale=${2:-320}:-1:flags=lanczos,palettegen "${1}.png"
-  ffmpeg -i "${1}" -i "${1}.png" -filter_complex "fps=${3:-10},scale=${2:-320}:-1:flags=lanczos[x];[x][1:v]paletteuse" "${1}".gif
-  rm "${1}.png"
+  local input="$1"
+  local scale="${2:-320}"
+  local fps="${3:-60}"
+  local start="${4:-11}"
+  local end="${5:-15}"
+
+  ffmpeg -y -ss "$start" -i "$input" -to "$end" -vf "fps=$fps,scale=$scale:-1:flags=lanczos,palettegen" "${input}.png"
+
+  ffmpeg -y -ss "$start" -i "$input" -i "${input}.png" -to "$end" -filter_complex "fps=$fps,scale=$scale:-1:flags=lanczos[x];[x][1:v]paletteuse" "${input}.gif"
+
+  rm "${input}.png"
 }
+
+gag() {
+    changes=""
+    if [ -z "$2" ]; then
+        changes="add: adding changes in file"
+    else
+        changes="$2"
+    fi
+    git commit -m "$changes"
+    git tag "${1}$(date | sed -e 's/[^a-zA-Z0-9]/-/g')"
+    git push
+    git push --tags
+}
+
+fakeTeamwork() {
+    COMMITS="$1"
+    shift
+    MESSAGE="$@"
+
+    for i in $(seq 1 $COMMITS); do
+        git commit --allow-empty -m "$MESSAGE ($i)" 
+    done
+}
+alias git-fakeTeamwork='fakeTeamwork'
 
 # pfetch variables
 export PF_INFO="ascii title os kernel shell wm uptime pkgs memory"
