@@ -288,7 +288,8 @@ require('lazy').setup({
         bashls = {},
         pyright = {},
         rust_analyzer = {},
-
+        mesonlsp = {},
+        asm_lsp = {},
         lua_ls = {
           settings = {
             Lua = {
@@ -306,6 +307,7 @@ require('lazy').setup({
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
         'shfmt',
+        'asmfmt',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -348,6 +350,7 @@ require('lazy').setup({
         lua = { 'stylua' },
         sh = { 'shfmt' },
         c = { 'clang_format' },
+        asm = { 'asmfmt' },
       },
     },
   },
@@ -462,7 +465,7 @@ require('lazy').setup({
       require('nvim-treesitter.configs').setup(opts)
     end,
   },
-
+  { 'github/copilot.vim' },
   require 'configs.autopairs',
 
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
