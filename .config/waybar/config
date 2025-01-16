@@ -1,13 +1,13 @@
 [
   {
-      "layer": "top",
-      "position": "top",
+      "layer": "bottom",
+      "position": "bottom",
       "height": 16,
       "spacing": 4,
-      "margin-top": 1,
-      "margin-bottom": -2,
-      "margin-left": 1,
-      "margin-right": 1,
+      "margin-top": -1,
+      "margin-bottom": 2,
+      "margin-left": 3,
+      "margin-right": 3,
       "fixed-center": true,
       "ipc": false,
 

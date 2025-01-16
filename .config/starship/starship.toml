@@ -71,5 +71,7 @@ disabled = true
 disabled = true
 [meson]
 disabled = true
+[java]
+disabled = true
 [package]
 disabled = true

@@ -1,5 +1,5 @@
-@define-color fgcolor #ffffff;
-@define-color bgcolor #1F1F1F;
+@define-color fgcolor #c4c5c8;
+@define-color bgcolor #040404;
 
 @define-color color0 #3b6c80;
 
@@ -25,9 +25,11 @@ window {
 }
 
 window#waybar {
-  background-color: alpha(@bgcolor, 0.0);
+  background-color: alpha(@bgcolor, 0.7);
   transition-duration: .5s;
-  border-radius: 7px;
+  border-radius: 5px;
+  border-left: 1px solid alpha(#c4c5c8, 1.0);
+  border-right: 1px solid alpha(#c4c5c8, 1.0);
 }
 
 #waybar.empty #window {
@@ -52,7 +54,7 @@ window#waybar {
 .modules-left,
 .modules-center,
 .modules-right {
-  background-color: alpha(@bgcolor, 0.7);
+  background-color: alpha(@bgcolor, 0.0);
   border-radius: 7px;
   margin: 2px;
 }
