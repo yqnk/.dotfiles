@@ -3,109 +3,93 @@
 @theme "my"
 
 configuration {
-  modi: "drun";
-  lines: 2;
-  font: "JetBrains Mono Nerd Font 12";
+  font: "JetBrainsMono Nerd Font Medium 18";
   show-icons: false;
+
+  drun {
+    display-name: "󰣇";
+  }
+
+  run {
+    display-name: "";
+  }
+
+  window {
+    display-name: "";
+  }
+
+  dmenu {
+    display-name: "󰸌";
+  }
+
   terminal: "kitty";
-  drun-display-format: "{name}";
-  location: 0;
   disable-history: false;
-  hide-scrollbar: true;
-  display-drun: "󰗍 run";
 }
 
-element-text,
-element-icon,
-mode-switcher {
-  background-color: inherit;
-  text-color: inherit;
+* {
+  border: 0;
+  margin: -3;
+  padding: 0;
+  spacing: 0;
+  background-color: transparent;
+
+
 }
 
 window {
-  height: 280px;
-  border: 1px;
-  location: center;
-  x-offset: 0px;
-  y-offset: 0px;
-  border-color: @border-col;
+  transparency: "real";
   background-color: @bg-col;
-  border-radius: 6px;
+  border-radius: 8px;
+  padding: 8px;
+  fullscreen: true;
 }
 
 mainbox {
-  background-color: @transparent;
+  padding: 25% 28%;
+  children: [inputbar, listview];
 }
 
 inputbar {
+  border-radius: 8px;
+  background-color: @transparent;
   children: [prompt, entry];
-  background-color: @transparent;
-  color: @green;
-  border-radius: 4px;
-  font: "Fira Code Bold 13";
-  padding: 2px;
-}
-
-prompt {
-  background-color: @transparent;
-  padding: 6px;
-  text-color: white;
-  border-radius: 5px;
-  margin: 20px 0px 0px 20px;
-}
-
-textbox-prompt-colon {
-  expand: false;
-  str: ":";
+  text-color: @green;
 }
 
 entry {
-  padding: 6px;
-  margin: 20px 0px 0px 10px;
-  background-color: @transparent;
+  background-color: inherit;
+  margin: 16px;
   color: @fg-col;
   placeholder: @placeholder-text;
   placeholder-color: @placeholder-color;
 }
 
+prompt {
+  background-color: inherit;
+  padding: 16px 16px 16px 30px;
+  color: @fg-col;
+}
+
 listview {
-  border: 0px 0px 0px;
-  padding: 6px;
-  margin: 10px;
-  columns: 1;
-  lines: 4;
-  background-color: @transparent;
+  lines: 5;
+  margin: 8px 0;
+  show-icons: false;
 }
 
 element {
-  padding: 10px;
-  background-color: @transparent;
+  margin: 0 16px;
+  border-radius: 5px;
+  children: [element-text];
+  background-color: transparent;
   text-color: @fg-col;
 }
 
-element-icon {
-  size: 25px;
+element-text {
+  padding: 16px 16px 16px 64px;
+  text-color: @fg-col;
 }
 
-element selected {
-  border-radius: 5px;
-  text-color: #000000;
-  background-color: @yellow;
-}
-
-mode-switcher {
-  spacing: 0;
-}
-
-button {
-  padding: 10px;
-  background-color: @bg-col-light;
-  text-color: @grey;
-  vertical-align: 0.5;
-  horizontal-align: 0.5;
-}
-
-button selected {
+element-text selected {
+  text-color: #ffffff;
   background-color: @bg-col;
-  text-color: @hoverbutton;
 }
